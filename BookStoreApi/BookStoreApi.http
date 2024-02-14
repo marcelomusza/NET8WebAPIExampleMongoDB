@@ -1,0 +1,27 @@
+@BookStoreApi_HostAddress = https://localhost:7235
+
+GET {{BookStoreApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{BookStoreApi_HostAddress}}/api/books
+
+###
+
+POST {{BookStoreApi_HostAddress}}/api/books
+Content-Type: application/json
+
+{
+  "Id": "77cc97a88e90e1bcc326b6b1",
+  "Name": "My New Book",
+  "Price": 60,
+  "Category": "Computers",
+  "Author": "Marcelo Muszalski"
+}
+
+###
+
+GET {{BookStoreApi_HostAddress}}/api/books/65cc97a88e90e1bcc326b6b1?id=string
+
+###

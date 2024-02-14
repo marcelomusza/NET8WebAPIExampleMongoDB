@@ -1,0 +1,77 @@
+# .NET and Visual Studio specific files
+*.suo
+*.user
+*.sln.docstates
+*.vscode/
+.vs/
+*.csproj.user
+*.bak
+*.cache
+*.DS_Store
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# NuGet packages
+packages/
+*.nupkg
+*.paket.*
+*.paket-files/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code specific files
+.vscode/
+
+# Rider specific files
+.idea/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Compiled source
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Package files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases
+*.log
+*.sqlite
+*.sqlite3
+*.db
+*.mdb
+
+# OS generated files
+.DS_Store
+ehthumbs.db
+Thumbs.db
