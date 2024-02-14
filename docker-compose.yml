@@ -1,0 +1,35 @@
+version: '3.8'
+services:
+  bookstoreapi:
+    build:
+      context: .
+      dockerfile: BookStoreApi/Dockerfile
+    ports:
+      - "8000:80"
+    depends_on:
+      - mongodb
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - BookStoreDatabase__ConnectionString=mongodb://mongodb:27017
+      - BookStoreDatabase__DatabaseName=BookStore
+      - BookStoreDatabase__BooksCollectionName=Books
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - 27017:27017
+
+  mongo_data:
+    image: mongo:latest
+    links:
+      - mongodb
+    volumes:
+      - ./mongo-data:/mongo-data
+    command:
+      /mongo-data/import.sh
+
+volumes:
+    mongo-data:
+
+networks:
+    default:

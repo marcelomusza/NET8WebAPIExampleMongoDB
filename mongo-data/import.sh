@@ -1,0 +1,1 @@
+mongoimport --host mongodb --db BookStore --collection Books --type json --file /mongo-data/seeddata.json --jsonArray
